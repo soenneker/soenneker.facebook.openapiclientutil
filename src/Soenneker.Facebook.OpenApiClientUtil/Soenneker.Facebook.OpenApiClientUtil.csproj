@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <Platforms>AnyCPU</Platforms>
+        <NoWarn>$(NoWarn);1591</NoWarn>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Description>A thread-safe utility for obtaining Facebook's OpenApiClient singleton.</Description>
+        <Version Condition="'$(BUILD_VERSION)' == ''">4.0.0</Version>
+        <Version Condition="'$(BUILD_VERSION)' != ''">$(BUILD_VERSION)</Version>
+        <AssemblyName>Soenneker.Facebook.OpenApiClientUtil</AssemblyName>
+        <PackageId>Soenneker.Facebook.OpenApiClientUtil</PackageId>
+        <PackageTags>facebook openapiclientutil meta graph-api openapi kiota client util singleton facebookopenapiclientutil csharp dotnet c# .net</PackageTags>
+        <Copyright>Copyright © 2026 Jake Soenneker</Copyright>
+        <Authors>Jake Soenneker</Authors>
+        <Company>https://soenneker.com</Company>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <IsPackable>true</IsPackable>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/soenneker/soenneker.facebook.openapiclientutil</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/soenneker/soenneker.facebook.openapiclientutil</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryBranch>main</RepositoryBranch>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <LangVersion>latest</LangVersion>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageIcon>icon.png</PackageIcon>
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+        <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+        <None Include="..\..\icon.png" Pack="true" PackagePath="\" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Soenneker.Kiota.GenericAuthenticationProvider" Version="4.0.47" />
+        <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="4.0.855" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\soenneker.facebook.httpclients\src\Soenneker.Facebook.HttpClients\Soenneker.Facebook.HttpClients.csproj" Condition="Exists('..\..\..\soenneker.facebook.httpclients\src\Soenneker.Facebook.HttpClients\Soenneker.Facebook.HttpClients.csproj')" />
+        <PackageReference Include="Soenneker.Facebook.HttpClients" Version="4.0.1" Condition="!Exists('..\..\..\soenneker.facebook.httpclients\src\Soenneker.Facebook.HttpClients\Soenneker.Facebook.HttpClients.csproj')" />
+        <ProjectReference Include="..\..\..\soenneker.facebook.openapiclient\src\Soenneker.Facebook.OpenApiClient\Soenneker.Facebook.OpenApiClient.csproj" Condition="Exists('..\..\..\soenneker.facebook.openapiclient\src\Soenneker.Facebook.OpenApiClient\Soenneker.Facebook.OpenApiClient.csproj')" />
+        <PackageReference Include="Soenneker.Facebook.OpenApiClient" Version="4.0.1" Condition="!Exists('..\..\..\soenneker.facebook.openapiclient\src\Soenneker.Facebook.OpenApiClient\Soenneker.Facebook.OpenApiClient.csproj')" />
+    </ItemGroup>
+</Project>
