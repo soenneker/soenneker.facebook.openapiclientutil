@@ -23,7 +23,7 @@ public sealed class FacebookOpenApiClientUtil : IFacebookOpenApiClientUtil
         {
             HttpClient httpClient = await httpClientUtil.Get(token).NoSync();
 
-            var apiKey = configuration.GetValueStrict<string>("Facebook:AccessToken");
+            var apiKey = configuration.GetStringStrict("Facebook:AccessToken");
             string authHeaderName = configuration["Facebook:AuthHeaderName"] ?? "Authorization";
             string authHeaderValueTemplate = configuration["Facebook:AuthHeaderValueTemplate"] ?? "Bearer {token}";
             string authHeaderValue = authHeaderValueTemplate.Replace("{token}", apiKey, StringComparison.Ordinal);
