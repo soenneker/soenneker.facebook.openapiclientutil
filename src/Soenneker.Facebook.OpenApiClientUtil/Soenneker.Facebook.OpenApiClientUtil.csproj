@@ -50,6 +50,6 @@
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Soenneker.Facebook.HttpClients" Version="4.0.29" />
-        <PackageReference Include="Soenneker.Facebook.OpenApiClient" Version="4.0.36" />
+        <PackageReference Include="Soenneker.Facebook.OpenApiClient" Version="4.0.37" />
     </ItemGroup>
 </Project>
