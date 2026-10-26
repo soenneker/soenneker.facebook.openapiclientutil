@@ -50,7 +50,7 @@
         <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="11.0.886" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Soenneker.Facebook.HttpClients" Version="11.0.32" />
+        <PackageReference Include="Soenneker.Facebook.HttpClients" Version="11.0.35" />
         <PackageReference Include="Soenneker.Facebook.OpenApiClient" Version="11.0.43" />
     </ItemGroup>
 </Project>
