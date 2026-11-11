@@ -46,8 +46,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Soenneker.Kiota.GenericAuthenticationProvider" Version="11.0.60" />
-        <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="11.0.889" />
+        <PackageReference Include="Soenneker.Kiota.GenericAuthenticationProvider" Version="11.0.61" />
+        <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="11.0.891" />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Soenneker.Facebook.HttpClients" Version="11.0.45" />
